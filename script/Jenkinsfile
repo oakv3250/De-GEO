@@ -1,8 +1,10 @@
 Pipeline{
     agent any
-
+    tools{
+        maven 'M2_HOME'
+    }
     stages{
-        stage("maven"){
+        stage("maven1"){
             steps{
             sh 'mvn clean validate compile install test package'
             }
